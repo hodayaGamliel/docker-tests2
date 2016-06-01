@@ -2,15 +2,15 @@
 
 # set -x
 
-# HOST_URL=https://backend.takipi.com
+HOST_URL=https://backend.takipi.com2
 TAKIPI_PROPERTIES_FILE="/opt/takipi/takipi.properties"
-# SECRET_KEY=S12974#v+OrCVNCP5zNbq0G#wY00LeBhPNV6U1wJY94aiZHdg08YvXNO1oDlettWeS4=#42e3
+SECRET_KEY=S12974#v+OrCVNCP5zNbq0G#wY00LeBhPNV6U1wJY94aiZHdg08YvXNO1oDlettWeS4=#hod
 JAR=https://s3.amazonaws.com/app-takipi-com/chen/scala-boom.jar
-# JAR_FILE=scala-boom.jar
+JAR_FILE=/tmp/share/jar_files/Test6.jar
 
-HOST_URL=$1
-SECRET_KEY=$2
-JAR_FILE=$3
+# HOST_URL=$1
+# SECRET_KEY=$2
+# JAR_FILE=$3
 
 function start_takipi_service()
 {
@@ -29,16 +29,11 @@ function change_secret_key()
   /opt/takipi/etc/takipi-setup-secret-key $SECRET_KEY
 }
 
-function download_jar()
-{
-  JAR=$1
-  wget $JAR
-}
-
 function run_test()
 {
   JAR_FILE=$1
-  nohup java -agentlib:TakipiAgent -jar $JAR_FILE &
+  # nohup java -agentlib:TakipiAgent -jar $JAR_FILE &
+  java -jar $JAR_FILE
 }
 
 function main()
@@ -46,7 +41,6 @@ function main()
   change_host_url $HOST_URL
   change_secret_key $SECRET_KEY
   start_takipi_service
-  download_jar $JAR
   run_test $JAR_FILE
 }
 
