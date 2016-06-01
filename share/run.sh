@@ -2,15 +2,16 @@
 
 # set -x
 
-HOST_URL=https://backend.takipi.com
+# HOST_URL=https://backend.takipi.com
 TAKIPI_PROPERTIES_FILE="/opt/takipi/takipi.properties"
-SECRET_KEY=S10330#hYkm9nIxDxbZL/Ks#UCn8QfrACntPjjwUm7rAG7mbuXjEa7w614joKUtMMeE=#ad7e
-JAR=https://s3.amazonaws.com/app-takipi-com/chen/scala-boom.jar
-JAR_FILE=/tmp/share/jar-files/test6.jar
+# SECRET_KEY=S10330#hYkm9nIxDxbZL/Ks#UCn8QfrACntPjjwUm7rAG7mbuXjEa7w614joKUtMMeE=#ad7e
+# JAR=https://s3.amazonaws.com/app-takipi-com/chen/scala-boom.jar
+# JAR_FILE=/tmp/share/jar-files/test6.jar
 
-# HOST_URL=$1
-# SECRET_KEY=$2
-# JAR_FILE=$3
+HOST_URL=$1
+SECRET_KEY=$2
+JAR_FILE=$3
+JAR_FILE=/tmp/share/jar-files/$JAR_FILE.jar
 
 function start_takipi_service()
 {
