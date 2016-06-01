@@ -2,11 +2,11 @@
 
 # set -x
 
-HOST_URL=https://backend.takipi.com2
+HOST_URL=https://backend.takipi.com
 TAKIPI_PROPERTIES_FILE="/opt/takipi/takipi.properties"
-SECRET_KEY=S12974#v+OrCVNCP5zNbq0G#wY00LeBhPNV6U1wJY94aiZHdg08YvXNO1oDlettWeS4=#hod
+SECRET_KEY=S10330#hYkm9nIxDxbZL/Ks#UCn8QfrACntPjjwUm7rAG7mbuXjEa7w614joKUtMMeE=#ad7e
 JAR=https://s3.amazonaws.com/app-takipi-com/chen/scala-boom.jar
-JAR_FILE=/tmp/share/jar_files/Test6.jar
+JAR_FILE=/tmp/share/jar_files/test6.jar
 
 # HOST_URL=$1
 # SECRET_KEY=$2
