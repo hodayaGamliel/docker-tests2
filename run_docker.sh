@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x 
+set -x
 
 IMAGE_NAME="hodaya/run"
 SHARE_DIR=/home/ubuntu/docker-tests2/share

@@ -13,7 +13,7 @@ MAINTAINER Hod
 RUN update-ca-certificates -f
 
 ARG JAR_FILE=test6
-ARG SK=S12974#v+OrCVNCP5zNbq0G#wY00LeBhPNV6U1wJY94aiZHdg08YvXNO1oDlettWeS4=#42e3
+ARG SK=S10330#hYkm9nIxDxbZL/Ks#UCn8QfrACntPjjwUm7rAG7mbuXjEa7w614joKUtMMeE=#ad7e
 ARG URL=https://backend.takipi.com
 
 # Get Takipi for containers
