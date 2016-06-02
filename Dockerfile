@@ -38,4 +38,5 @@ ENV D_JAR_FILE $JAR_FILE
 ENV D_SK $SK
 ENV D_URL $URL
 
-CMD sleep 5 && /tmp/share/run.sh $D_URL $D_SK $D_JAR_FILE && sleep 5000
+CMD sleep 5000
+#CMD sleep 5 && /tmp/share/run.sh $D_URL $D_SK $D_JAR_FILE && sleep 5000
