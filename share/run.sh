@@ -33,8 +33,7 @@ function change_secret_key()
 function run_test()
 {
   JAR_FILE=$1
-  # nohup java -agentlib:TakipiAgent -jar $JAR_FILE &
-  java -jar $JAR_FILE
+  nohup java -agentlib:TakipiAgent -jar $JAR_FILE &
 }
 
 function main()
