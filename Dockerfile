@@ -30,14 +30,14 @@ ENV JAVA_OPTS -agentlib:TakipiAgent
 RUN /opt/takipi/etc/takipi-setup-secret-key S12974#v+OrCVNCP5zNbq0G#wY00LeBhPNV6U1wJY94aiZHdg08YvXNO1oDlettWeS4=#42e3
 RUN /opt/takipi/etc/takipi-setup-machine-name takipi-test
 
-# Getting Java tester
-#RUN mkdir /tmp/takipi-logs/
-
-#??
 ENV D_JAR_FILE $JAR_FILE
 ENV D_SK $SK
 ENV D_URL $URL
-RUN echo $D_SK
 
-#CMD sleep 5000
-CMD sleep 5 && /tmp/share/run.sh $D_URL $D_SK $D_JAR_FILE && sleep 5000
+RUN  rm /bin/sh && ln -s /bin/bash /bin/sh
+
+CMD  [ "/bin/bash" , "-c" , "rm /bin/sh && ln -s /bin/bash /bin/sh  && \
+     /tmp/share/run.sh $D_URL $D_SK $D_JAR_FILE && \
+     timeout 60 grep -q 'AHT' <(tail -f /opt/takipi/log/bugtale_service.log) && \
+     sleep 5 && \
+     cp -r /opt/takipi/log /tmp/takipi-logs/ /tmp/share/"]
