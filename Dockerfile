@@ -38,7 +38,6 @@ RUN  rm /bin/sh && ln -s /bin/bash /bin/sh
 
 CMD  [ "/bin/bash" , "-c" , "rm /bin/sh && ln -s /bin/bash /bin/sh  && \
      /tmp/share/run.sh $D_URL $D_SK $D_JAR_FILE && \
-     sleep 5000 && \
      timeout 60 grep -q 'AHT' <(tail -f /opt/takipi/log/bugtale_service.log) && \
      sleep 5 && \
      cp -r /opt/takipi/log /tmp/takipi-logs/ /tmp/share/"]
