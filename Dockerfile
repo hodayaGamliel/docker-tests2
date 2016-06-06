@@ -41,4 +41,4 @@ CMD  [ "/bin/bash" , "-c" , "rm /bin/sh && ln -s /bin/bash /bin/sh  && \
      sleep 10 && \
      timeout 60 grep -q 'AHT evacuating' <(tail -f /opt/takipi/log/bugtale_service.log) && \
      sleep 5 && \
-     cp -r /opt/takipi/log /tmp/takipi-logs/ /tmp/share/"]
+     cp -r /opt/takipi/log /tmp/share/"]
